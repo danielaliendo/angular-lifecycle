@@ -1,1 +1,12 @@
-<p>product-page works!</p>
+<products-product-price
+  *ngIf="isProductVisible"
+  [price]="currentPrice"
+/>
+<p>Change value to execute lifecycle hooks:</p>
+<ol>
+  <li>ngDoCheck()</li>
+  <li>ngAfterContentChecked()</li>
+  <li>ngAfterViewChecked()</li>
+</ol>
+<button (click)="isProductVisible = !isProductVisible">Change</button>
+<button (click)="increasePrice()">Increase product price</button>
